@@ -1,22 +1,24 @@
-# styled-progress-bars
+# indatastar-styled-progress-bars
 
 A React Native library providing **beautiful animated progress bars**, including:  
 
-- **SemiCircularProgressBar** – animated semicircle progress  
-- **WaveProgressBar** – horizontal animated wave progress  
+- 🌓 **SemiCircularProgressBar** – animated semicircle progress  
+- 🌊 **WaveProgressBar** – horizontal animated wave progress  
+- 🔵 **CircularProgressBar** – animated circular progress  
 
 Built with **React Native**, **React Native SVG**, and **Animated API**.
 ---
 ## ✨ Features
 
+
 - 🎨 **Gradient Support** – Easily apply smooth gradients to your progress bars.
 - ⚡ **Animated Progress** – Smooth, performant animations using React Native’s Animated API.
-- 📐 **Customizable Sizes** – Adjust width, height, radius, stroke width, and wave height to fit your design.
-- 🎯 **Flexible Progress Range** – Set your own maximum (`end`) value for precise control.
-- 💻 **TypeScript Ready** – Fully typed props for IntelliSense and safer coding.
-- 🔄 **Auto & Manual Updates** – Works with dynamic values or manual state updates.
-- ✅ **Expo & React Native Compatible** – Works in both Expo and bare React Native projects.
-- 🌊 **Multiple Styles** – Choose between semicircular and wave-style progress indicators.
+- 📐 **Customizable Sizes** – Adjust width, height, radius, stroke width, and wave height.
+- 🎯 **Flexible Progress Range** – Set your own maximum (`end`) value.
+- 💻 **TypeScript Ready** – Fully typed props with IntelliSense support.
+- 🔄 **Auto & Manual Updates** – Works with dynamic or controlled state updates.
+- ✅ **Expo & React Native Compatible** – Works in Expo and bare React Native projects.
+- 🌈 **Multiple Styles** – Wave, semicircular, and circular progress indicators.
 
 
 ## Installation
@@ -30,6 +32,32 @@ yarn add indatastar-styled-progress-bars react-native-svg
 ```
 
 ## 🚀 Usage
+
+
+###  CircularProgressBar
+
+```
+import { CircularProgressBar } from 'indatastar-styled-progress-bars';
+
+<CircularProgressBar
+  progress={75}
+  end={100}
+  radius={60}
+  strokeWidth={10}
+  colors={['#8e2de2', '#4a00e0']}
+  duration={600}
+/>
+```
+### 📋 Props
+| Prop        | Type     | Default                  | Description               |
+|-------------|----------|--------------------------|---------------------------|
+| progress    | number   | 0                        | Current progress value    |
+| end         | number   | 50                       | Maximum progress value    |
+| radius      | number   | 50                       | Radius of semicircle      |
+| strokeWidth | number   | 10                       | Stroke width              |
+| colors      | string[] | ['#4c669f', '#3b5998']   | Gradient colors           |
+| duration    | number   | 500                      | Animation duration (ms)   |
+
 
 #### 🌊 WaveProgressBar
 ```
